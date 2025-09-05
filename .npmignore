@@ -1,0 +1,22 @@
+# Source code (chỉ publish build output)
+src/
+tsconfig.json
+rollup.config.js
+
+# Development files  
+.vscode/
+.idea/
+
+# Tests
+__tests__/
+*.test.ts
+*.spec.ts
+
+# CI/CD
+.github/
+
+# Documentation source
+docs/
+
+# IMPORTANT: KHÔNG ignore lib/ trong .npmignore
+# lib/ cần được publish

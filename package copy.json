@@ -1,0 +1,85 @@
+{
+  "name": "@dqcai/tree",
+  "version": "1.0.0",
+  "type": "module",
+  "description": ".",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "module": "lib/index.mjs",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "import": "./lib/index.mjs",
+      "require": "./lib/index.js",
+      "browser": "./lib/index.umd.js"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./lib/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "lib",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "rollup -c rollup.config.js",
+    "clean": "rimraf lib",
+    "prebuild": "npm run clean",
+    "obfuscate": "node ./scripts/obfuscate.mjs",
+    "prepublishOnly": "npm run build && npm run obfuscate",
+    "release": "npm publish --access public"
+  },
+  "keywords": [
+    "tree",
+    "dqcai",
+    "doanquoccuong",
+    "cuongdq",
+    "node",
+    "browser",
+    "deno",
+    "bun",
+    "react-native",
+    "expo",
+    "universal",
+    "tree",
+    "array",
+    "data-structure",
+    "hierarchy",
+    "typescript"
+  ],
+  "author": "Đoàn Quốc Cường",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cuongdqpayment/dqcai-tree.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cuongdqpayment/dqcai-tree/issues"
+  },
+  "homepage": "https://github.com/cuongdqpayment/dqcai-tree#readme",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.6",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-typescript": "^12.1.4",
+    "@types/node": "^18.0.0",
+    "esbuild": "^0.25.9",
+    "javascript-obfuscator": "^4.1.1",
+    "obfuscate": "^0.0.11",
+    "rimraf": "^6.0.1",
+    "rollup": "^4.49.0",
+    "rollup-plugin-esbuild": "^6.2.1",
+    "typescript": "^5.9.2"
+  },
+  "peerDependencies": {},
+  "overrides": {
+    "glob": "^11.0.3",
+    "rimraf": "^6.0.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
