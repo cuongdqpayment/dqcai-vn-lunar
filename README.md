@@ -361,7 +361,7 @@ We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) f
 ### **Development Setup**
 
 ```bash
-git clone https://github.com/dqcai/vn-lunar.git
+git clone https://github.com/cuongdqpayment/dqcai-vn-lunar.git
 cd vn-lunar
 npm install
 npm run dev
