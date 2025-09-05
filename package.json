@@ -25,6 +25,14 @@
     "lib",
     "README.md"
   ],
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
   "scripts": {
     "build": "rollup -c rollup.config.js",
     "clean": "rimraf lib",
@@ -44,7 +52,7 @@
     "bun",
     "react-native",
     "expo",
-    "universal", 
+    "universal",
     "vietnamese",
     "lunar",
     "calendar",
@@ -52,6 +60,22 @@
     "solar",
     "date",
     "conversion",
+    "lunar",
+    "calendar",
+    "typescript",
+    "vietnam",
+    "solar",
+    "date",
+    "âm-lịch",
+    "dương-lịch",
+    "can-chi",
+    "tết",
+    "festival",
+    "astrology",
+    "frontend",
+    "backend",
+    "nodejs",
+    "browser",
     "typescript"
   ],
   "author": "Đoàn Quốc Cường",

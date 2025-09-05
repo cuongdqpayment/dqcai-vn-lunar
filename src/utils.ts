@@ -1,5 +1,16 @@
 // src/utils.ts
-import { TK13, TK14, /* other TK arrays */ } from './constants';
+import {
+  TK13,
+  TK14,
+  TK15,
+  TK16,
+  TK17,
+  TK18,
+  TK19,
+  TK20,
+  TK21,
+  TK22,
+} from "./constants";
 import { LunarDate } from './lunar-date';
 
 /**
@@ -96,13 +107,30 @@ export function decodeLunarYear(year: number, k: number): LunarDate[] {
 export function getYearInfo(year: number): LunarDate[] {
   let yearCode: number;
   
+  if (year < 1200 || year > 2199) {
+    throw new Error(`Year ${year} is not supported. Supported range: 1200-2199`);
+  }
+  
   if (year < 1300) {
     yearCode = TK13[year - 1200];
   } else if (year < 1400) {
     yearCode = TK14[year - 1300];
+  } else if (year < 1500) {
+    yearCode = TK15[year - 1400];
+  } else if (year < 1600) {
+    yearCode = TK16[year - 1500];
+  } else if (year < 1700) {
+    yearCode = TK17[year - 1600];
+  } else if (year < 1800) {
+    yearCode = TK18[year - 1700];
+  } else if (year < 1900) {
+    yearCode = TK19[year - 1800];
+  } else if (year < 2000) {
+    yearCode = TK20[year - 1900];
+  } else if (year < 2100) {
+    yearCode = TK21[year - 2000];
   } else {
-    // Add other conditions for TK15-TK22
-    throw new Error(`Year ${year} is not supported`);
+    yearCode = TK22[year - 2100];
   }
   
   return decodeLunarYear(year, yearCode);
